@@ -1,0 +1,19 @@
+.idea/
+.idea_modules/
+*.iml
+*.bak
+*.orig
+.cache
+.project
+.classpath
+
+# build related
+target/
+plugin/target/
+sites/shared/agilesites/telmore-*.jar
+
+# vagrant ignores
+.vagrant/
+.hg/
+.hg*
+.flow
