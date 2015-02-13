@@ -1,4 +1,4 @@
-val v = "2.0-M1-SNAPSHOT"
+val v = "2.0-M1"
 
 val ver = "11.1.1.8.0"
 
