@@ -1,22 +1,16 @@
-val v = "2.0-M1"
-
-val ver = "11.1.1.8.0"
-
 val demo  = project.in(file(".")).enablePlugins(agilesites.build.AgileSitesPlugin)
 
 name := "agilesites2-demo"
 
 organization := "com.sciabarra"
 
-version := ver + "_" + v
+version := "0.1-SNAPSHOT"
 
 resolvers += "sciabarra" at "http://dl.bintray.com/content/sciabarra/maven"
 
 libraryDependencies ++= Seq(
-  "com.sciabarra" % "agilesites2-core" % version.value,
-  "com.sciabarra" % "agilesites2-api" % version.value)
-
-scalaVersion := "2.11.5"
+  "com.sciabarra" % "agilesites2-core" % "11.1.1.8.0_2.0-M1",
+  "com.sciabarra" % "agilesites2-api" %  "11.1.1.8.0_2.0-M1")
 
 crossPaths := false
 
