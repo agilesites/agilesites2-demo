@@ -1,45 +1,26 @@
-val demo  = project.in(file(".")).enablePlugins(SbtWeb)
+import sbt._
 
-val ver = "11.1.1.8.0"
+val app = project.in(file(".")).enablePlugins(AgileSitesPlugin)
 
-name := "demo"
+name := "agilesites2-app"
 
 organization := "com.sciabarra"
 
 version := "0.1-SNAPSHOT"
 
-crossPaths := false
+val v = "2.0-M1"
 
-resolvers += "sciabarra" at "http://dl.bintray.com/content/sciabarra/maven"
+val s = "11.1.1.8.0"
+
+libraryDependencies ++= Seq(
+  "com.sciabarra" % "agilesites2-core" % s"${s}_${v}",
+  "com.sciabarra" % "agilesites2-api" % s"${s}_${v}",
+  "com.sciabarra" %  "agilesites2-setup" % v)
+
+offline := true
+
+crossPaths := false
 
 javacOptions ++= Seq("-g", "-Xlint:unchecked")
 
-libraryDependencies ++= Seq(
-      "com.sciabarra" % "agilesites2-core" % (ver + "_1.9-M3" ),
-      "com.sciabarra" % "agilesites2-api" % (ver + "_1.9-M3" ),
-      //"com.oracle.sites" % "cs-core" % ver ,
-      //"com.oracle.sites" % "cs" % ver,
-      //"com.oracle.sites" % "xcelerate" % ver,
-      //"com.oracle.sites" % "assetapi" % ver,
-      //"com.oracle.sites" % "assetapi-impl" % ver,
-      //"com.oracle.sites" % "jsoup" % ver,
-      //"com.oracle.sites" % "xstream" % ver,
-      "org.webjars" % "bootstrap" % "3.2.0",
-      "org.webjars" % "bootstrapvalidator" % "0.5.2",
-      "org.webjars" % "jquery" % "1.11.1",
-      "org.webjars" % "jquery-ui" % "1.11.1",
-      "org.webjars" % "jquery-throttle-debounce-plugin" % "1.1",
-      "org.webjars" % "picturefill" % "2.1.0",
-      "org.webjars" % "holderjs" % "2.4.0",
-      "com.novocode" % "junit-interface" % "0.9" % "test")
-
-includeFilter in (Assets, LessKeys.less) := "main.less"
-
-asUploadTarget := None //Some(uploadTarget)
-
-asWebFolder := WebKeys.assets.value
-
-asWebExcludeFilter := "*.less" | "*.map"
-
-resourceGenerators in Compile += asWebPackage.taskValue
-
+net.virtualvoid.sbt.graph.Plugin.graphSettings
