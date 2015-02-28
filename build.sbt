@@ -1,8 +1,6 @@
-import sbt._
+val demo = project.in(file(".")).enablePlugins(AgileSitesPlugin)
 
-val app = project.in(file(".")).enablePlugins(AgileSitesPlugin)
-
-name := "agilesites2-app"
+name := "agilesites2-demo"
 
 organization := "com.sciabarra"
 
@@ -23,4 +21,3 @@ crossPaths := false
 
 javacOptions ++= Seq("-g", "-Xlint:unchecked")
 
-net.virtualvoid.sbt.graph.Plugin.graphSettings
