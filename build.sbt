@@ -10,7 +10,7 @@ val v = "2.0-M1"
 
 val s = "11.1.1.8.0"
 
-// resolvers += "sciabarra" at "http://dl.bintray.com/content/sciabarra/maven"
+resolvers += "sciabarra" at "http://dl.bintray.com/content/sciabarra/maven"
 
 ivyConfigurations += config("tomcat")
 
