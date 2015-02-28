@@ -10,10 +10,12 @@ val v = "2.0-M1"
 
 val s = "11.1.1.8.0"
 
+ivyConfigurations += config("tomcat")
+
 libraryDependencies ++= Seq(
   "com.sciabarra" % "agilesites2-core" % s"${s}_${v}",
   "com.sciabarra" % "agilesites2-api" % s"${s}_${v}",
-  "com.sciabarra" %  "agilesites2-setup" % v)
+  "com.sciabarra" %  "agilesites2-setup" % v % "tomcat")
 
 offline := true
 
