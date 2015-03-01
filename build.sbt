@@ -1,3 +1,7 @@
+val v = scala.io.Source.fromFile(file("version.txt")).getLines.next.trim
+
+val s = "11.1.1.8.0"
+
 val demo = project.in(file(".")).enablePlugins(AgileSitesPlugin)
 
 name := "agilesites2-demo"
@@ -5,10 +9,6 @@ name := "agilesites2-demo"
 organization := "com.sciabarra"
 
 version := "0.1-SNAPSHOT"
-
-val v = "2.0-M1"
-
-val s = "11.1.1.8.0"
 
 resolvers += "sciabarra" at "http://dl.bintray.com/content/sciabarra/maven"
 
