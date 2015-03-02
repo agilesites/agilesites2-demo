@@ -28,3 +28,5 @@ javacOptions ++= Seq("-g", "-Xlint:unchecked")
 crossPaths := false
 
 javacOptions ++= Seq("-g", "-Xlint:unchecked")
+
+unmanagedBase := file(sitesWebapp.value) / "WEB-INF" / "lib"
