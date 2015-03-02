@@ -9,6 +9,6 @@ public class Setup extends wcs.java.Setup {
 
 	@Override
 	public Class<?>[] getAssets() {
-        Util.classesFromResource(Config.site, "elements.txt");
+           return Util.classesFromResource(Config.site, "elements.txt");
 	}
 }
