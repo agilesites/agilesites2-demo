@@ -1,16 +1,18 @@
 package demo.model.definition;
 
 import wcs.api.Index;
-import wcs.java.model.annotation.AssetType;
-import wcs.java.model.annotation.PageAssetAttribute;
-import wcs.java.model.annotation.PageDefinition;
-import wcs.java.model.annotation.Required;
+import wcs.java.model.annotation.*;
 import wcs.java.model.definition.WCSDefinition;
+import wcs.java.model.enums.StartMenuTypeEnum;
 import wcs.java.model.type.AssetAttributeType;
 import wcs.java.model.type.StringAttributeType;
 import wcs.java.model.type.WCSAttribute;
 
 @PageDefinition("DemoPage")
+@StartMenu(items={
+        @StartMenuItem(name="New Content Page", type = StartMenuTypeEnum.MENU_TYPE_NEW, assetType = "Page"),
+        @StartMenuItem(name="Find Content Page", type = StartMenuTypeEnum.MENU_TYPE_FIND, assetType = "Page")
+})
 @Index("demo/definitions.txt")
 public class DemoPage implements WCSDefinition {
 
