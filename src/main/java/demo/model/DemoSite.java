@@ -13,7 +13,7 @@ import wcs.java.model.enums.Constants;
  */
 public class DemoSite extends SiteModelBase {
 
-    DemoType demoType = new DemoType();
+    DemoFlexFamily demoFlexFamily = new DemoFlexFamily();
 
 	DemoAttribute demoAttributes = new DemoAttribute();
 	PageAttribute pageAttributes = new PageAttribute();
@@ -35,9 +35,6 @@ public class DemoSite extends SiteModelBase {
 				AssetTypeNames.PAGE_ATTRIBUTE.toString(),
 				AssetTypeNames.PAGE_DEFINITION.toString(),
 				AssetTypeNames.PAGE.toString(),
-				AssetTypeNames.ADV_COLS.toString(),
-				AssetTypeNames.SEGMENTS.toString(),
-				AssetTypeNames.SCALAR_VARS.toString(),
                 DemoAssetTypeNames.DEMO_A.toString(),
                 DemoAssetTypeNames.DEMO_C.toString(),
                 DemoAssetTypeNames.DEMO_CD.toString(),
@@ -49,6 +46,9 @@ public class DemoSite extends SiteModelBase {
 		// enabled users with his role
 		addUserRoles("fwadmin", "AdvancedUser", "GeneralAdmin", "SitesUser");
 
+        // flex families
+        setFlexFamilies(demoFlexFamily);
+
 		// attributes
 		setAttributes(demoAttributes, pageAttributes);
 
@@ -57,8 +57,6 @@ public class DemoSite extends SiteModelBase {
 
         // start menus
 		setStartMenuItems(startMenus);
-
-        setFlexFamilies(demoType);
 
 	}
 

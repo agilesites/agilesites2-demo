@@ -3,10 +3,9 @@ package demo.model.definition;
 import wcs.api.Index;
 import wcs.java.model.annotation.*;
 import wcs.java.model.definition.WCSDefinition;
+import wcs.java.model.definition.WCSFlexFamily;
 import wcs.java.model.enums.StartMenuTypeEnum;
-import wcs.java.model.type.AssetAttributeType;
-import wcs.java.model.type.StringAttributeType;
-import wcs.java.model.type.WCSAttribute;
+import wcs.java.model.type.*;
 
 @PageDefinition("DemoPage")
 @StartMenu(items={
@@ -14,22 +13,42 @@ import wcs.java.model.type.WCSAttribute;
         @StartMenuItem(name="Find Content Page", type = StartMenuTypeEnum.MENU_TYPE_FIND, assetType = "Page")
 })
 @Index("demo/definitions.txt")
-public class DemoPage implements WCSDefinition {
+public class Content implements WCSFlexFamily {
 
     @PageAssetAttribute("title")
     @Required
     private WCSAttribute<StringAttributeType> title;
 
     @PageAssetAttribute("subtitle")
-    @Required
     private WCSAttribute<StringAttributeType> subtitle;
 
     @PageAssetAttribute("summary")
     @Required
     private WCSAttribute<StringAttributeType> summary;
 
+    @PageAssetAttribute("detail")
+    @Required
+    private WCSAttribute<TextAttributeType> detail;
+
     @PageAssetAttribute("image")
     @Required
-    @AssetType("Demo_C")
-    private WCSAttribute<AssetAttributeType> image;
+    private WCSAttribute<BlobAttributeType> image;
+
+    @PageAssetAttribute("teaserTitle")
+    @Multiple
+    private WCSAttribute<StringAttributeType> teaserTitle;
+
+    @PageAssetAttribute("teaserText")
+    @Multiple
+    private WCSAttribute<TextAttributeType> teaserText;
+
+    @PageAssetAttribute("related")
+    @Multiple
+    @AssetType("Page")
+    private WCSAttribute<AssetAttributeType> related;
+
+    @PageAssetAttribute("seeAlso")
+    @Multiple
+    @AssetType("Page")
+    private WCSAttribute<AssetAttributeType> seeAlso;
 }

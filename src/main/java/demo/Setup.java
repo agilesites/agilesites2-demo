@@ -19,7 +19,6 @@ public class Setup extends wcs.java.Setup {
         try {
             // validate the content model
             sb.append(new DemoSite().setup(ics, username, password));
-            //sb.append(new StaticImporter(site).setup(ics));
             sb.append(new ElementImporter().setup(ics, username, password));
             sb.append(super.exec(ics, site, username, password));
         } catch (Throwable ex) {
