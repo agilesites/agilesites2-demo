@@ -2,7 +2,6 @@ package demo.model.definition;
 
 import wcs.api.Index;
 import wcs.java.model.annotation.*;
-import wcs.java.model.definition.WCSDefinition;
 import wcs.java.model.definition.WCSFlexFamily;
 import wcs.java.model.enums.StartMenuTypeEnum;
 import wcs.java.model.type.*;
@@ -20,6 +19,7 @@ public class Content implements WCSFlexFamily {
     private WCSAttribute<StringAttributeType> title;
 
     @PageAssetAttribute("subtitle")
+    @Editor("RichEditor")
     private WCSAttribute<StringAttributeType> subtitle;
 
     @PageAssetAttribute("summary")
@@ -28,6 +28,7 @@ public class Content implements WCSFlexFamily {
 
     @PageAssetAttribute("detail")
     @Required
+    @Editor("RichEditor")
     private WCSAttribute<TextAttributeType> detail;
 
     @PageAssetAttribute("image")

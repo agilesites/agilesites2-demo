@@ -16,6 +16,9 @@ public class DemoStartMenu extends StartMenuModelBase {
         final static Log log = getLog(DemoStartMenu.class);
 
         public DemoStartMenu() {
+            createDefaultStartMenus();
             assetDefinitionLoader.saveStartMenus(this);
         }
+
+
 }
