@@ -1,3 +1,5 @@
+target/
+project/project/
 .idea/
 .idea_modules/
 *.iml
@@ -6,14 +8,4 @@
 .cache
 .project
 .classpath
-
-# build related
-target/
-plugin/target/
-sites/shared/agilesites/telmore-*.jar
-
-# vagrant ignores
-.vagrant/
-.hg/
-.hg*
-.flow
+agilesites.properties
