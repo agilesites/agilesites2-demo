@@ -8,7 +8,6 @@ import wcs.java.util.Util;
 import COM.FutureTense.Interfaces.ICS;
 import COM.FutureTense.Interfaces.IList;
 
-
 public class Setup extends wcs.java.Setup {
 
     private static Log log = Log.getLog(Setup.class);
