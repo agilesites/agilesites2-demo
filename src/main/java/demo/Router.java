@@ -17,6 +17,7 @@ public class Router extends wcs.java.Router {
 
 	@Override
 	public Call route(Env e, URL url) {
+
 		if (log.debug())
 			log.debug("url=%s", url);
 

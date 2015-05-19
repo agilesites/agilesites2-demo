@@ -12,8 +12,8 @@ public class Setup extends wcs.java.Setup {
 
     private static Log log = Log.getLog(Setup.class);
 
-    @Override
-    public String exec(ICS ics, String site, String username, String password) {
+    //@Override
+    public String noexec(ICS ics, String site, String username, String password) {
         StringBuilder sb = new StringBuilder();
         try {
             // validate the content model
@@ -25,8 +25,6 @@ public class Setup extends wcs.java.Setup {
             log.error("*** ERROR: " + ex.getMessage() + " ***");
             sb.append("*** ERROR: ").append(ex.getMessage()).append(" ***");
         }
-
-
         return sb.toString();
     }
 

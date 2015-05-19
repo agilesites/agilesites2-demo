@@ -16,7 +16,7 @@ public class ContentLayout extends Element {
 
 	public static AssetSetup setup() {
 		return new Template("Page", "ContentLayout", Template.LAYOUT,
-				"Demo_Content", demo.element.page.ContentLayout.class) //
+				"Content", demo.element.page.ContentLayout.class) //
 				.cache("false", "false") // change caching here
                 .cacheCriteria("d")
 				.description("Layout for type Page Content");

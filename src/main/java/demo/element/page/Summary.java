@@ -16,7 +16,7 @@ public class Summary extends Element {
 
 	public static AssetSetup setup() {
 		return new Template("Page", "Summary", Template.INTERNAL, // change
-				"Demo_Content", demo.element.page.Summary.class) //
+				"Content", demo.element.page.Summary.class) //
 				.cache("false", "false") // change caching here
                 .cacheCriteria("d")
 				.description("Template Summary for type Page ");
