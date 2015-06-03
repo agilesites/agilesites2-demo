@@ -2,7 +2,7 @@ resolvers += Resolver.url("sbt plugin", url("http://dl.bintray.com/content/sciab
 
 resolvers += Resolver.url("sciabarra", url("http://dl.bintray.com/content/sciabarra/maven"))(Resolver.mavenStylePatterns)
 
-addSbtPlugin("com.sciabarra" % "agilesites2-build" % "2.0.1")
+addSbtPlugin("com.sciabarra" % "agilesites2-build" % "2.0.2")
 
 resolvers += Resolver.typesafeRepo("releases")
 

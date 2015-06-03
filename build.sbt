@@ -19,9 +19,7 @@ ivyConfigurations += config("tomcat")
 libraryDependencies ++= Seq(
   "com.sciabarra" % "agilesites2-core" % s"${s}_${v}",
   "com.sciabarra" % "agilesites2-api" % s"${s}_${v}",
-  "com.sciabarra" % "agilesites2-setup" % "2.0" % "tomcat")
-
-offline := true
+  "com.sciabarra" % "agilesites2-setup" % "2.0.2" % "tomcat")
 
 crossPaths := false
 
